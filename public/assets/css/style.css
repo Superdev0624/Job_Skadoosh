@@ -7933,11 +7933,83 @@ input[name="typework"] {
     border: 1.5px #000000;
     width: 24px;
     height: 24px;
-
 }
 .login-footer {
     font-family: 'Urbanist';
     font-size: 16px;
     color: #9C9F9E;
     top: 200px;
+}
+.auth-pass-inputgroup button.show-password{
+    position: absolute;
+	right: 20px;
+	top: 16px;
+	background: none;
+}
+.auth-pass-inputgroup .forms-control{
+    border-radius: 100px !important;
+}
+.visitor-check {
+    position: relative;
+}
+.visitor-check input[type="radio"] {
+    opacity: 0;
+    position: absolute;
+}
+input[type="radio"].visitor-input + label.visitor-label {
+    cursor: pointer;
+    position: relative;
+    border: 2px solid #e6e7f4;
+    border-radius: 7px;
+    padding: 14px 20px 15px 54px;
+    color: #191919;
+    display: block;
+    margin-bottom: 0px;
+}
+input[type="radio"].visitor-input:checked + label.visitor-label {
+    border: 2px solid #ffb28d;
+}
+input[type="radio"].visitor-input + label.visitor-label::before {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    left: 18px;
+    top: 50%;
+    background-color: #fff;
+    border: 2px solid #1c1d28;
+    border-radius: 50%;
+    margin-top: -10px;
+}
+input[type="radio"].visitor-input:checked + label.visitor-label::before {
+    border-color: #ffb28d;
+}
+input[type="radio"].visitor-input + label.visitor-label::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    background: #ff945f;
+    height: 8px;
+    width: 8px;
+    left: 24px;
+    border-radius: 50%;
+    opacity: 0;
+    margin-top: -4px;
+}    
+input[type="radio"].visitor-input:checked + label.visitor-label::after {
+    opacity: 1;
+}    
+.visitor-label h4{
+    margin: 0 0 5px;
+    font-size: 16px;
+    line-height: 1.1;
+}
+.visitor-label p{
+    color: #b4b6c5;
+}
+.visitor-label p:last-child{
+    margin: 0;
+}
+.remember-check{
+    margin-right: 5px;
 }

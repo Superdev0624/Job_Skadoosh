@@ -23,14 +23,14 @@
                 <label calss="signup-intro">Sign up to find work you love</label>
                 <form class="form-horizontal formss-position" method="POST" action="{{ route('login.post') }}">
                     @csrf
-                    <div class="mt-1 justify-around row p-2">
+                    <div class="mt-1 justify-around row pt-2">
                         @if(!empty(\Config::get('constants.role'))) 
                             @foreach(\Config::get('constants.role') as $key => $value)
                                 <div class="col-6 form-group">
-                                    <div class="container-box">
-                                        <label class="container" for="role_{{ $key }}">{{ $value }}
-                                        <input class="form-check-input" type="radio" required {{ old('role') == $key ? 'checked' : '' }} value="{{ $key }}" name="role" id="role_{{ $key }}">
-                                            <span class="checkmark"></span>
+                                    <div class="visitor-check">
+                                        <input class="visitor-input" type="radio" required {{ old('role') == $key ? 'checked' : '' }} value="{{ $key }}" name="role" id="role_{{ $key }}">
+                                        <label class="visitor-label" for="role_{{ $key }}">                       
+                                            {{ $value }}              
                                         </label>
                                     </div>
                                 </div>
