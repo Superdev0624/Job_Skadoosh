@@ -18,14 +18,10 @@
                             </div>
     
                             <div class="f-right">
-                            <div class="input-group md-form form-sm form-1 pl-0">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text lighten-3" id="basic-text1"><i class="fas fa-search text-white"
-                                        aria-hidden="true"></i></span>
-                                </div>
-                                <input class="forms-control" type="text" placeholder="Search" aria-label="Search">
-                            </div>
-                                <div class="header-btn d-none f-right d-lg-block">                                 
+                                <a href="{{ url('/nx/login') }}" class="nav_login_credential">Log In</a>
+                                <a href="{{ url('/nx/signup') }}" class="nav_signup_credential">Sign Up</a>
+                                <!-- <a href="{{ url('/') }}" class="btn nav_top_btn_second"><i class="fa fa-globe"></i> Region Website <i class="fa fa-caret-down"></i></a> -->
+                                <!-- <div class="header-btn d-none f-right d-lg-block">                                 
                                     <div class="popover__wrapper mt-0">                                            
                                         <a href="#">                                                               
                                             <h2 class="btn btn-locations mb-0"><i class="fa fa-globe"></i> Cities <i class="fa fa-caret-down"></i></h2>                                                                        
@@ -38,7 +34,7 @@
                                             </div>                                                                 
                                         </div>                                                                     
                                     </div>                                                                         
-                                </div>                                                                             
+                                </div> -->
                             </div>
                     </div>
                     <!-- Mobile Menu -->
