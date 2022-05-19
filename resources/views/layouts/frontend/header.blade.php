@@ -18,8 +18,27 @@
                             </div>
     
                             <div class="f-right">
-                                <a href="{{ url('/nx/login') }}" class="nav_login_credential">Log In</a>
-                                <a href="{{ url('/nx/signup') }}" class="nav_signup_credential">Sign Up</a>
+                            <div class="input-group md-form form-sm form-1 pl-0">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text lighten-3" id="basic-text1"><i class="fas fa-search text-white"
+                                        aria-hidden="true"></i></span>
+                                </div>
+                                <input class="forms-control" type="text" placeholder="Search" aria-label="Search">
+                            </div>
+                                <div class="header-btn d-none f-right d-lg-block">                                 
+                                    <div class="popover__wrapper mt-0">                                            
+                                        <a href="#">                                                               
+                                            <h2 class="btn btn-locations mb-0"><i class="fa fa-globe"></i> Cities <i class="fa fa-caret-down"></i></h2>                                                                        
+                                        </a>                                                                       
+                                        <div class="popover__content locations">                                   
+                                            <div class="w-100">                                                    
+                                                @foreach($cities as $city)                                         
+                                                    <p><a class="text-black text-left text-nowrap text-capitalize" href="{{ route('show.jobs.by.city', ['city'=> \Str::of($city)->kebab()]) }}">{{ $city }}</a></p>               
+                                                @endforeach                                                        
+                                            </div>                                                                 
+                                        </div>                                                                     
+                                    </div>                                                                         
+                                </div>                                                                             
                             </div>
                     </div>
                     <!-- Mobile Menu -->
