@@ -75,7 +75,6 @@ body {
     cursor: pointer;
     font-size: 20px !important;
     border: none;
-    height: 64px;
 }
 .nav_signup_credential:hover{
     background-color: #e66727 !important;
@@ -297,18 +296,16 @@ body {
 .form-group label	{
     font-family: 'Urbanist', sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 24px;
+    margin-top: 30px;
     margin-bottom: 10px;
-    vertical-align: text-top;
-
 }
 .form-group input{
     padding:22px;
-    border: 1.5px solid #000000 !important;
-    border-radius: 4px !important;
+    border: 1px solid #dcdcdc !important;
+    border-radius: 3px !important;
     background-color: #fff;
     font-weight: 300;
-    vertical-align: text-top;
 
 }
 .form-group select{
@@ -1188,10 +1185,14 @@ hr {
 }
 
 .wrap-inner h1{
+    /* font-family: 'Happy Kids';
+    margin-top: 40px;
+    text-decoration: none;
+    line-height: 65px; */
     font-style: normal;
     color: #ff8549;
-    font-family: 'Glamour Absolute';
-    font-size: 56px;
+    font-family: 'roboto', serif;
+    font-size: 90px;
     font-weight: 900;
     margin-top: 40px;
     text-decoration: none;
@@ -7474,16 +7475,7 @@ footer {
     -ms-user-select: none;
     user-select: none;
     color: #666666;
-    font-size: 18px;
-}
-.container-box {
-    position: relative;
-    z-index: 99;
-    width: 249px;
-    height: 100px;
-    border:1px solid #CDD0E9;
-    border-radius: 10px;
-    padding: 20px;
+    font-size: 16px;
 }
 @media (max-width: 767px) {
     .job-category-listing .single-listing .select-Categories .container {
@@ -7816,19 +7808,22 @@ footer {
 }
 
 .notice-txt {
-    font-family: 'Urbanist';
     text-align: center;
-    font-size: 16px;
-    color: #9C9FBE;
+    font-size: 15px;
     margin-top: 30px;
 }
 
 .first_sign_up {
+    background-color: white !important;
+    border-radius: 30px !important;
     color: #FF8549 !important;
+    padding: 10px 22px !important;
     font-weight: 500;
     font-family: 'Urbanist','sans-serif';
+    letter-spacing: 0px !important;
     cursor: pointer;
-    font-size: 16px !important;
+    font-size: 20px !important;
+    border: 1px solid #FF8549;
 }
 
 input[name="typework"] {
@@ -7871,78 +7866,3 @@ input[name="typework"] {
     margin: 0px;
     transform: translate(0px, 72px);
 }
-
-.bg-img-login {
-    background: url(../../assets/signup.png);
-    position: absolute; 
-    background-repeat: no-repeat;
-    height: 150vh;
-    width: 100%;
-    object-fit: contain;  
-}
-.login-form {
-    padding: 0 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 150vh;
-}
-.signup-label{
-    color: #1C1D28;
-    font-family: Glamour Absolute;
-    font-size: 56px;
-    font-weight: bold;
-    position: left;
-}
-.signup-intro {
-    color: #9C9FBE;
-    font-family: 'Urbanist';
-    font-size: 20px;
-    font-style: medium;
-    top: 20px;
-    opacity: 0.7;
-}
-
-.show-text {
-    color: #1C1D28;
-    font-family: 'Scheherazade New';
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.special-txt {
-    color: #EA3A22;
-    font-family: 'Scheherazade New';
-    font-size: 22px;
-    font-style: bold;
-}
-
-.forms-control {
-    border: 1px solid #9C9FBE;
-    border-radius: 100px;
-    height: 64px;
-    width: 100%;
-    padding: 20px 30px;
-    font-size: 20px;
-    font-weight: medium;
-    font-family: 'Urbanist';
-    background: transparent;
-}
-
-.show-password {
-    border: none;   
-}
-
-.remember-check {
-    border: 1.5px #000000;
-    width: 24px;
-    height: 24px;
-}
-
-.login-footer {
-    font-family: 'Urbanist';
-    font-size: 16px;
-    color: #9C9FBE;
-    top: 200px;
-}
-

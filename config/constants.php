@@ -26,8 +26,8 @@ return [
         'career' => 'Career'
     ],
     'role' => [
-        'client' =>"I am an Employer",
-        'freelancer'  =>"I'm a freelancer",
+        'client' =>"I'm a client, hiring for a project",
+        'freelancer'  =>"I'm a freelancer, looking for work",
     ],
     'country' => [
         'Afghanistan' => 'Afghanistan',
