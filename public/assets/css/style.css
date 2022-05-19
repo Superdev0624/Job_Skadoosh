@@ -7865,8 +7865,17 @@ input[name="typework"] {
     transform: translate(0px, 72px);
 }
 
-.bg-img-login {
+.bg-img-signup {
     background: url(../../assets/signup.png);
+    position: absolute;
+    backgrount-repeat: no-repeat;
+    height: 150vh;
+    width: 100%;
+    object-fit: contain;
+}
+
+.bg-img-login {
+    background: url(../../assets/login.png);
     position: absolute;
     backgrount-repeat: no-repeat;
     height: 150vh;

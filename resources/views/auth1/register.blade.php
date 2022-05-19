@@ -19,7 +19,7 @@
                 <a href="{{ url('/') }}"><img src="{{ asset('assets/img/logo/skadoosh.png') }}" alt="skadoosh" width="264" height="58"></a>
             </div>
             <div class="signup-input-form">
-                <label class="signup-label">SingUp</label><br>
+                <label class="signup-label">Sign Up</label><br>
                 <label calss="signup-intro">Sign up to find work you love</label>
                 <form class="form-horizontal formss-position" method="POST" action="{{ route('login.post') }}">
                     @csrf
@@ -86,7 +86,7 @@
             <p class="login-footer">Copyright @<script>document.write(new Date().getFullYear())</script>All rights reserved</p>
         </div>
         <div class="col">
-            <img class="bg-img-login">
+            <img class="bg-img-signup">
         </div>
     </div>
     @endsection
