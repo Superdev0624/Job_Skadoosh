@@ -34,11 +34,7 @@
                             <label class="forms-label show-text">Password<span class="special-txt">*</span></label><br>
                             <div class="input-group auth-pass-inputgroup @error('password') is-invalid @enderror">
                                 <input type="password" name="password" class="forms-control  @error('password') is-invalid @enderror" id="userpassword" value="{{ old('password') }}" placeholder="Enter Your Password Here" aria-label="Password" aria-describedby="password-addon">
-                                <!-- <div class="input-group-prepend">
-                                    <span class="input-group-text" id="validationTooltipUsernamePrepend">
-                                        <button class="btn-light show-password" type="button" id="password-addon"><i class="mdi mdi-eye-outline"></i></button>
-                                    </span>
-                                </div> -->
+                                <button class="btn-light show-password" type="button" id="password-addon"><i class="mdi mdi-eye-outline"></i></button>
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -68,5 +64,7 @@
             </div>
         </div>
         <!-- end account-pages -->
-
+    @endsection
+    @section('script')
+        <script src="{{ URL::asset('assets/js/show_password.js') }}"></script>
     @endsection
