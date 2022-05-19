@@ -59,14 +59,17 @@
                         @endif
                     </div>
                     <div class="mb-3">
-                    <label for="username" class="forms-label show-text">Password<span class="special-txt">*</span></label><br>
-                        <input type="password" class="forms-control @error('password') is-invalid @enderror" id="userpassword" name="password"
+                        <label for="username" class="forms-label show-text">Password<span class="special-txt">*</span></label><br>
+                        <div class="input-group auth-pass-inputgroup @error('password') is-invalid @enderror">
+                            <input type="password" class="forms-control @error('password') is-invalid @enderror" id="userpassword" name="password"
                             placeholder="Enter Your Password Here" autofocus required>
+                            <button class="btn-light show-password" type="button" id="password-addon"><i class="mdi mdi-eye-outline"></i></button>
                             @if ($errors->has('password'))
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $errors->first('password') }}</strong>
                             </span>
-                        @endif
+                            @endif
+                        </div>
                     </div>
                     <div class="form-group mb-3">
                         <input class="remember-check" type="checkbox" value="" id="flexCheckDefault">

@@ -7946,6 +7946,9 @@ input[name="typework"] {
 	top: 16px;
 	background: none;
 }
+.auth-pass-inputgroup button.show-password:focus {
+	background: none !important;
+}
 .auth-pass-inputgroup .forms-control{
     border-radius: 100px !important;
 }
