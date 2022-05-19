@@ -17,7 +17,6 @@
                     <div class="categories">
                         @include('categories.single-listing', ['categories' => $categories])
                     </div>
-
                 </div>
             </div>
         </div>
