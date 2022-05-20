@@ -15,13 +15,13 @@
     @include('layouts.frontend.stylelib')
     <div class="row">
         <div class="col login-form">
-            <div class="logo">
+            <div class="logo logo-property">
                 <a href="{{ url('/') }}"><img src="{{ asset('assets/img/logo/skadoosh.png') }}" alt="skadoosh" width="264" height="58"></a>
             </div>
-            <div class="signup-input-form">
+            <div>
                 <label class="signup-label">Sign Up</label><br>
                 <label calss="signup-intro">Sign up to find work you love</label>
-                <form class="form-horizontal formss-position" method="POST" action="{{ route('login.post') }}">
+                <form class="form-horizontal form-position" method="POST" action="{{ route('login.post') }}">
                     @csrf
                     <div class="mt-1 justify-around row pt-2">
                         @if(!empty(\Config::get('constants.role'))) 

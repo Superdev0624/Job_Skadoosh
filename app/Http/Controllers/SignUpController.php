@@ -37,11 +37,7 @@ class SignUpController extends Controller
             'role'     => 'required',
             'email'    => 'required|email|unique:users',
             'name'     => 'required',
-            'password' => 'required|min:6',
-            'country'  => 'required',
-            'dob' => ['required', 'date', 'before:today'],
-            'avatar' => ['required', 'image' ,'mimes:jpg,jpeg,png','max:1024'],
-
+            'password' => 'required|min:6'
         ]);
         if ($validator->fails()) {
             return redirect()->back()->WithErrors($validator)->withInput();
@@ -54,21 +50,11 @@ class SignUpController extends Controller
 
     public function create(array $data)
     {
-        if (request()->has('avatar')) {            
-            $avatar = request()->file('avatar');
-            $avatarName = time() . '.' . $avatar->getClientOriginalExtension();
-            $avatarPath = public_path('/images/');
-            $avatar->move($avatarPath, $avatarName);
-        }
-
         return User::create([
             'role'  =>$data['role'],
             'name'   => $data['name'],
             'email'  => $data['email'],
-            'country' => $data['country'],
-            'password' => Hash::make($data['password']),
-            'dob' => date('Y-m-d', strtotime($data['dob'])),
-            'avatar' => "/images/" . $avatarName,
+            'password' => Hash::make($data['password'])
         ]);
     }
 

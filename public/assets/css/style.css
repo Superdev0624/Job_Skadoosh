@@ -64,16 +64,13 @@ body {
 }
 
 .nav_signup_credential {
-    background-color: #FF8549 !important;
-    border-radius: 30px !important;
-    color: white !important;
-    padding: 10px 22px !important;
-    font-weight: 500;
-    opacity: 1;
-    font-family: 'Urbanist','sans-serif';
-    letter-spacing: 0px !important;
+    background-color: #FF8549;
+    border-radius: 100px;
+    color: #F3F3F7;
+    font-weight: bold;
+    font-family: 'Urbanist';
     cursor: pointer;
-    font-size: 20px !important;
+    font-size: 16px;
     border: none;
     height: 64px;
 }
@@ -295,18 +292,27 @@ body {
     border-bottom: 1px solid #F3FCEE;
 }
 .form-group label	{
-    font-family: 'Urbanist', sans-serif;
+    font-family: 'Urbanist';
     font-weight: 500;
     font-size: 16px;
     vertical-align: text-top;
+    color: #1C1D28;
+}
+
+.forgot_text_label {
+    font-weight: 600;
+    font-family: 'Urbanist';
+    color: #9C9FBE;
+    font-size: 16px;
 }
 .form-group input{
-    padding:22px;
-    border: 1.5px solid #000000 !important;
+    padding: 24px;
+    border: 1.5px solid #000000;
     border-radius: 4px !important;
     background-color: #fff;
     font-weight: 300;
     vertical-align: text-top;
+    color: #D9D9D9;
 }
 .form-group select{
     height: 45px !important;
@@ -7475,7 +7481,6 @@ footer {
     -ms-user-select: none;
     user-select: none;
     color: #666666;
-    font-size: 16px;
 }
 @media (max-width: 767px) {
     .job-category-listing .single-listing .select-Categories .container {
@@ -7486,8 +7491,6 @@ footer {
     position: absolute;
     opacity: 0;
     cursor: pointer;
-    height: 0;
-    width: 0;
 }
 .job-category-listing .single-listing .select-Categories .checkmark {
     position: absolute;
@@ -7812,16 +7815,15 @@ footer {
     text-align: center;
     font-size: 16px;
     color: #9C9F9E;
-    margin-top: 30px;
+    font-weight: normal;
 }
 
 .first_sign_up {
-    background-color: white !important;
-    color: #FF8549 !important;
-    font-weight: 500;
+    color: #FF8549;
+    font-weight: 600;
     font-family: 'Urbanist';
     cursor: pointer;
-    font-size: 16px !important;
+    font-size: 16px;
 }
 
 input[name="typework"] {
@@ -7868,19 +7870,23 @@ input[name="typework"] {
 .bg-img-signup {
     background: url(../../assets/signup.png);
     position: absolute;
-    backgrount-repeat: no-repeat;
-    height: 150vh;
+    background-repeat: no-repeat;
+    height: 161vh;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .bg-img-login {
-    background: url(../../assets/login.png);
+    background: url(../../assets/login2.png);
     position: absolute;
-    backgrount-repeat: no-repeat;
-    height: 150vh;
+    background-repeat: no-repeat;
+    height: 161vh;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
+}
+
+.logo-property {
+    margin: 50px 0;
 }
 
 .login-form{
@@ -7888,7 +7894,7 @@ input[name="typework"] {
     display: flex;
     flex-direction: column;
     justify-content:space-between;
-    height: 150vh;
+    height: 161vh;
 }
 
 .signup-label {
@@ -7903,35 +7909,37 @@ input[name="typework"] {
     color: #9C9F9E;
     font-family: 'Urbanist';
     font-size: 20px;
-    font-style: medium;
+    font-weight: medium;
     top: 20px;
     opacity: 0.7;
 }
 .show-text {
     color: #1C1D28;
-    font-family: 'Urbanist';
-    font-size: 22px;
-    font-style: bold;
+    font-family: 'Scheherazade New';
+    font-size: 18px;
+    font-weight: bold;
     vertical-align: text-top;
 }
 
 .special-txt {
     color: #EA3A22;
-    font-family: 'Urbanist';
-    font-size: 16px;
-    font-style: bold;
+    font-family: 'Scheherazade New';
+    font-size: 22px;
+    font-weight: bold;
+    vertical-align: 0.2em;
 }
 
 .forms-control {
-    border: 1px solid #9C9F9E;
+    border: 1px solid #E5E7F4;
     border-radius: 100px;
     height: 64px;
     width: 100%;
-    padding: 20px 30px;
-    font-size: 20px;
-    font-weight: medium;
+    padding: 20px 34px;
+    font-size: 16px;
+    font-weight: 500;
     font-family: 'Urbanist';
     background: transparent;
+    color: #9C9FBE;
 }
 
 .show-password {
@@ -7947,7 +7955,7 @@ input[name="typework"] {
     font-family: 'Urbanist';
     font-size: 16px;
     color: #9C9F9E;
-    top: 200px;
+    font-weight: 400;
 }
 .auth-pass-inputgroup button.show-password{
     position: absolute;
