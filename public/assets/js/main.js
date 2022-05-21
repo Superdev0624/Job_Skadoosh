@@ -9,7 +9,9 @@
       });
     });
 
-
+   $("#navigation").clone().prependTo($(".nav-mobile"));
+   $(".header-search-btn").clone().appendTo($(".nav-mobile"));
+   $(".cities-dropdown").clone().appendTo($(".nav-mobile"));
 /* 2. slick Nav */
 // mobile_menu
     var menu = $('ul#navigation');

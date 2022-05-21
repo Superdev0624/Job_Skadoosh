@@ -29,6 +29,7 @@ body {
     text-align: left;
     background-color: #fff;
 }
+img{max-width: 100%;}
 .nav_top_btn
 {
     background-color: #FF8549 !important;
@@ -777,10 +778,6 @@ p ,span{
     font-size: 16px;
     line-height: 30px;
     margin-bottom: 15px;    
-}
-.header-area{
-    min-height: 90px;
-    line-height: 50px;
 }
 
 .logos{
@@ -7652,7 +7649,7 @@ footer {
     color: #FF8549 !important;
     background-color: transparent;
     border: solid 1px #FF8549 !important;
-    padding: 10px 22px !important;
+    padding: 13px 22px !important;
     border-radius: 30px !important;
     line-height: 22px !important;
     text-align: center;
@@ -7743,9 +7740,6 @@ footer {
 }
 
 @media (max-width: 767px) {
-    .headder-top .logo img {
-        width: 250px;
-    }
     .wrap-inner h1 {
         font-size: 40px;
     }
@@ -7754,10 +7748,7 @@ footer {
     }
 }
 
-@media (max-width: 575px) {
-    .headder-top .logo img {
-        width: 220px;
-    }    
+@media (max-width: 575px) {   
     .ctgf .filters ul li a {
         font-size: 14px;
     }
@@ -8032,4 +8023,330 @@ input[type="radio"].visitor-input:checked + label.visitor-label::after {
 }
 .remember-check{
     margin-right: 5px;
+}
+
+/*Header CSS*/
+a, .logo, i, button, .cities-list{
+	-webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+.header-area {
+    border-bottom: 1px solid #e5e7f4;
+    background-color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.header-block-area {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    align-items: center;
+    padding: 15px 0px;
+}
+.logo {
+    margin: auto 33px auto 0;
+}
+
+.logo img {
+    float: left;
+    max-width: 255px;
+}
+.logo a:hover {
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
+
+.mainmenu ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    text-align: right;
+}
+.mainmenu ul li {
+    display: inline-block;
+    position: relative;
+}
+.mainmenu ul li a {
+    display: block;
+    color: #9c9fbe;
+    padding: 20px 24px;
+}
+.mainmenu > ul > li:hover > a {
+    text-decoration: none;
+    color: #ff8549;
+}
+.mobile-menu-wrapper {
+    display: none;
+    width: 30px;
+    height: 40px;
+    position: relative;
+    margin: auto 0px;
+}
+.menu-check {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 40px;
+    z-index: 7;
+    opacity: 0;
+    cursor: pointer;
+}
+.menu-icon {
+    width: 30px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.menu-icon > div {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ff8549;
+    transition: .4s;
+    z-index: 6;
+}
+.menu-icon > div:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ff8549;
+    top: -8px;
+    left: 0;
+    transition: .4s;
+}
+.menu-icon > div:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ff8549;
+    top: 8px;
+    left: 0;
+    transition: .4s;
+}
+.menu-check:checked + .menu-icon > div {
+    transform: rotate(135deg);
+    background-color: #ff8549;
+    width: 90%;
+    height: 3px;
+}
+.menu-check:checked:hover + .menu-icon > div {
+    transform: rotate(225deg);
+    background-color: #ff8549;
+    width: 90%;
+    height: 2px;
+}
+.menu-check:checked + .menu-icon > div:before,
+.menu-check:checked + .menu-icon > div:after {
+    top: 0;
+    transform: rotate(90deg);
+    background-color: #ff8549;
+    width: 100%;
+    height: 2px;
+}
+.menu-check:checked {
+    position: fixed;
+    top: inherit;
+    right: auto;
+}
+.menu-check:checked + .menu-icon {
+    position: fixed;
+    z-index: 6;
+}
+.menu {
+    position: fixed;
+    top: 82px;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    visibility: hidden;
+    transition: .6s;
+    z-index: 3;
+    overflow: hidden;
+}
+.menu > div {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: .6s;
+    padding-bottom: 120px;
+    padding-top: 10px;
+}
+.nav-mobile {
+    overflow-y: auto;
+}
+.menu > div > div {
+    width: 100%;
+    padding:8px 42px 8px 42px;
+    opacity: 0;
+    -webkit-transition: all .6s ease 0s;
+    transition: all .6s ease 0s;
+    color: #DFDFDF;
+}
+.nav-mobile ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+.nav-mobile > ul > li > ul{padding: 0px;box-shadow: none;width: 100%;max-width: 300px;}
+.nav-mobile > ul > li {
+    list-style: none;
+    position: relative;
+    z-index: 1;
+}
+.nav-mobile > ul > li:before {
+    position: absolute;
+    right: 0px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    top: 0px;
+    text-align: right;
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    content: "\f078";
+    color: #595959;
+    z-index: -1;
+    opacity: 0;
+    transition: .4s;
+}
+
+.nav-mobile > ul > li > a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 4px 0px;;
+    transition: .3s;
+    font-size: 18px;
+    display: block;
+}
+.nav-mobile ul li a {
+    color: #333;
+}
+.menu ul li ul li a {
+    font-size: 16px;
+}
+.menu ul li ul {
+    padding: 0px 0px 0px 10px;
+    height: 0px;
+    overflow: hidden;
+    opacity: 0;
+}
+.menu ul li.menu-drop-active ul {
+    height: auto;
+    overflow: visible;
+    opacity: 1;
+}
+.nav-mobile > ul > li > a:hover {
+    color: #ff8549;
+}
+.menu-check:checked ~ .menu {
+    visibility: visible;
+    height: 100%;
+    overflow: visible;
+}
+.menu-check:checked ~ .menu > div > div {
+    opacity: 1;
+}
+
+/* Header Right CSS */
+
+.header-right {
+    margin-left: auto;
+    display: flex;
+}
+.header-search-btn {
+    max-width: 193px;
+    width: 100%;
+}
+.header-search-btn .form-control{
+	padding: 12px 20px 12px 55px;
+	background-image: url(../img/search.svg);
+	background-repeat: no-repeat;
+	background-position: left 18px center;
+	background-size: 20px;
+	border-radius: 40px;
+    border: 1px solid #e5e7f4;
+	font-size: 18px;
+    height:50px;
+}
+.header-search-btn .form-control:focus, .cities-dropdown .form-control:focus{
+    outline: none;
+    box-shadow: none;
+}
+.header-search-btn .form-control::placeholder {
+	color: #9c9fbe;
+	opacity: 1;
+}
+.cities-dropdown{
+    margin-left: 50px;
+    position: relative;
+}
+.cities-dropdown::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: #F3F3F7;
+    left: -26px;
+    top: 0px;
+}
+.cities-list{
+    position: absolute;
+    right: 0px;
+    top: 200px;;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    padding-top: 10px;
+}
+.cities-dropdown:hover .cities-list{
+    top: 100%;
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+.cities-dropdown ul{
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px 0px;
+    width: 200px;
+    box-shadow: 0px 0px 4px 0px rgba(100,100,100,0.2);
+}
+.cities-dropdown ul li a{
+    display: block;
+    color: #1C1D28;
+    padding: 5px 15px;
+    font-size: 16px;
+}
+.cities-dropdown ul li a:hover{
+    color: #ff8549;
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+	.logo {margin-right: 15px;}
+}
+@media (min-width:100px) and (max-width: 991px) {
+    .mainmenu, .header-search-btn, .cities-dropdown, .cities-dropdown::before {display: none;}
+	.mobile-menu-wrapper, .nav-mobile .header-search-btn{display: block;}
+	.logo {margin: auto auto auto 0;}
+    #navigation .nav_login_credential{padding: 7px 0px !important;}
+	.header-block-area {padding:5px 0px;}
+	.header-search-btn {margin-left: 0;margin-top: 15px;}
+    .dropdown-toggle::after {position: absolute;right: 20px;top: 27px;}
+}
+@media (min-width: 100px) and (max-width:480px) {
+	.header-search-btn, .header-dropdown {max-width: 100%;}
+    .logo img{max-width: 200px;}
+    .menu {top: 70px;}
+}
+@media (min-width: 100px) and (max-width: 380px) {	
+    .menu > div > div{padding: 8px 15px;}
 }
